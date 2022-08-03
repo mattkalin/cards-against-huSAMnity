@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="aahClientApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apples Against Humanity</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Francois+One|News+Cycle|Open+Sans+Condensed:300|PT+Sans+Narrow" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <!-- Site files -->
+    <script src="app.js"></script>
+    <script src="app_routing.js"></script>
+    <script src="app_controllers.js"></script>
+    <script src="app_services.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main ng-controller="routeController">
+    <div ng-view>
+    </div>
+</main>
+</body>
+</html>
