@@ -440,8 +440,8 @@ exports.loadMasterDecks = function(cahJson) {
     for (let i = 0; i < cahJson.whiteCards.length; i++) {
         const card = cahJson.whiteCards[i];
         console.log(card);
-        cahAnswerDeckArray.push(card);
-    }
+        cahAnswerDeckArray.push({title: '', text: card});
+      }
 
 };
 
@@ -589,7 +589,7 @@ exports.setEventHandlers = function(socket) {
         for (let i = data.holding; i < 10; i++) {
             const card = game.answerDeck.getRandomCard();
 
-            console.log("Dealing card: " + card); 
+            console.log("Dealing card: " + card);
 
             // Check whether we have run out of cards; should never really happen.
             if (card === null) {
