@@ -30,9 +30,8 @@ const bodyParser = require('body-parser');
  *  Program-specific modules.
  */
 const gameList = require('./GameList');
-const a2aJson = require('./assets/apples_to_apples.json');
 const cahJson = require('./assets/cards_against_humanity.json');
-gameList.loadMasterDecks(a2aJson, cahJson);
+gameList.loadMasterDecks(cahJson);
 
 /**
  *  Create the main Express app.

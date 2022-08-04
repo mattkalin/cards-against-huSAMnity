@@ -390,10 +390,11 @@ exports.getDebugDump = function() {
  *  Load the decks from the JSON files.
  *  Note that these were imported, and have their own formats.
  */
-exports.loadMasterDecks = function(a2aJson, cahJson) {
+exports.loadMasterDecks = function(cahJson) {
     console.log('GameList.loadMasterDecks');
 
     // Load A2A decks: questions are green, answers are red.
+    /*
     for (let i = 0; i < a2aJson.greenCards.length; i++) {
         const card = a2aJson.greenCards[i];
         const text = card.text;
@@ -424,6 +425,11 @@ exports.loadMasterDecks = function(a2aJson, cahJson) {
                                      text:  text.substr(dashIndex + 1).trim()})
         }
     }
+    */
+
+    // var black_cards_array = black_cards.split("\n");
+    // var white_cards_array = white_cards.join("").split("\n");
+
 
     // Load CAH decks: questions are black, answers are white.
     for (let i = 0; i < cahJson.blackCards.length; i++) {
@@ -433,8 +439,10 @@ exports.loadMasterDecks = function(a2aJson, cahJson) {
 
     for (let i = 0; i < cahJson.whiteCards.length; i++) {
         const card = cahJson.whiteCards[i];
-        cahAnswerDeckArray.push({title: '', text: card});
+        console.log(card);
+        cahAnswerDeckArray.push(card);
     }
+
 };
 
 /**
@@ -561,13 +569,10 @@ exports.setEventHandlers = function(socket) {
         game.gameLaunched = true;
 
         // Load the card decks for the game. Make a copy of the master decks.
-        if (game.gameTypeApples) {
-            game.questionDeck = new Deck('A2A Questions', a2aQuestionDeckArray);
-            game.answerDeck = new Deck('A2A Answers', a2aAnswerDeckArray);
-        } else {
-            game.questionDeck = new Deck('CAH Questions', cahQuestionDeckArray);
-            game.answerDeck = new Deck('CAH Answers', cahAnswerDeckArray);
-        }
+
+        game.questionDeck = new Deck('CAH Questions', cahQuestionDeckArray);
+        game.answerDeck = new Deck('CAH Answers', cahAnswerDeckArray);
+
 
         // Notify all players that the game is launched.
         io.to(game.roomId).emit('Launched', {});
@@ -583,6 +588,8 @@ exports.setEventHandlers = function(socket) {
         const handCards = [];
         for (let i = data.holding; i < 10; i++) {
             const card = game.answerDeck.getRandomCard();
+
+            console.log("Dealing card: " + card); 
 
             // Check whether we have run out of cards; should never really happen.
             if (card === null) {
