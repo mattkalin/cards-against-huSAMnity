@@ -1,3 +1,8 @@
+Sammy-themed Cards Against Humanity 
+Based on the Node JS program written by Wade Woolridge 
+Link to repo here: https://github.com/wadewooldridge/apples_against_humanity/blob/master/package.json
+
+
 # apples_against_humanity
 "Apples to Apples" and "Cards Against Humanity" multi-player server in Node.JS.
 
