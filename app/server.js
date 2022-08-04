@@ -116,8 +116,8 @@ io.on('connection', function(socket) {
 });
 
 // Listen for socket IO requests on port 3001.
-server.listen(80);
-console.log('socket.io listening on port 80 (HTTP)');
+server.listen(443);
+console.log('socket.io listening on port 443 (HTTPS)');
 
 // Drop through to catch 404 and forward to error handler.
 app.use(function(req, res, next) {
