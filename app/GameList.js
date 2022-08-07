@@ -439,7 +439,7 @@ exports.loadMasterDecks = function(cahJson) {
 
     for (let i = 0; i < cahJson.whiteCards.length; i++) {
         const card = cahJson.whiteCards[i];
-        console.log(card);
+        // console.log(card);
         cahAnswerDeckArray.push({title: '', text: card});
       }
 
@@ -653,6 +653,14 @@ exports.setEventHandlers = function(socket) {
             sendGameStatus(game, 'Waiting for players to be ready (' + readyCount + '/' + playerCount + ').');
         }
     });
+
+    // // judge has requested a new prompt/question card
+    // socket.on('NewPrompt', function(data){
+    //   let questionCard = game.questionDeck.getRandomCard();
+    //   io.to(game.roomId).emit('NewPrompt', {
+    //       questionCard: questionCard
+    //   });
+    // });
 
     // Solution: received from each non-judge player during the hand, with their proposed solution.
     socket.on('Solution', function(data) {

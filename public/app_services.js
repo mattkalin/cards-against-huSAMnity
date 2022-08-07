@@ -216,6 +216,11 @@ app.service('GameService', ['$http', '$location', '$log', '$q', function($http, 
             self.checkCallback('NewHand', data);
         });
 
+        // this.socket.on('NewPrompt', function(data) {
+        //     $log.log('on.NewPrompt');
+        //     self.checkCallback('NewPrompt', data);
+        // });
+
         this.socket.on('PlayerList', function(data) {
             $log.log('on.PlayerList: ', data);
             const playerList = data.playerList;

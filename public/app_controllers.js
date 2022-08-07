@@ -581,6 +581,14 @@ app.controller('playGameController', ['$interval', '$location', '$log', '$sce', 
             $scope.$apply();
         },
 
+        // choose a new prompt card
+        // this.newPrompt = function(){
+        //   $log.log("New prompt requested");
+        //   console.log("New prompt requested");
+        //
+        //   GameService.send('NewPrompt', {});
+        // },
+
         // NewHand: received to start a new turn with a new player and question card.
         NewHand: function(data) {
             $log.log('cb.NewHand: ', data);

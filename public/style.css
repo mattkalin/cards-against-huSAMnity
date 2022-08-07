@@ -229,7 +229,8 @@ body {
     -webkit-transform: translateY(-50%); }
 
 #board-div .question-card,
-#board-div .solution-card {
+#board-div .solution-card,
+#board-div .skip-prompt {
   margin: auto; }
 
 #board-div > p {
@@ -243,11 +244,19 @@ body {
   border-radius: 6px; }
 
 .question-card,
-.answer-card {
+.answer-card,
+.skip-prompt {
   background-color: white; }
 
 .question-card-front.cah {
   background-color: black; }
+
+.skip-prompt {
+  background-color: maroon;
+  color: white;
+  width: 292px;
+  height: 76px;
+  margin: 2px 4px; }
 
 .question-card-title.a2a,
 .answer-card-title.a2a {
@@ -287,14 +296,16 @@ body {
   margin: 0; }
 
 .question-card-text.cah,
-.answer-card-text.cah {
+.answer-card-text.cah,
+.skip-prompt {
   width: 292px;
   height: 76px;
   margin: 2px 4px;
   font-size: 115%; }
 
 .question-card-text.cah p,
-.answer-card-text.cah p {
+.answer-card-text.cah p,
+.skip-prompt p {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -370,7 +381,8 @@ body {
   #column-2 {
     width: 100%; }
   .question-card-text,
-  .answer-card.text {
+  .answer-card.text,
+  .skip-prompt {
     min-height: inherit; } }
 
 /* Styling for adapting to not-as-tall screens and displays. */
@@ -399,7 +411,8 @@ body {
     font-size: 75%;
     height: 30px; }
   .question-card-text.cah,
-  .answer-card-text.cah {
+  .answer-card-text.cah,
+  .skip-prompt {
     width: 263px;
     height: 51px;
     font-size: 80%; }
