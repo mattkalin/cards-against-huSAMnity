@@ -61,11 +61,6 @@ app.use(function(request, response, next) {
 });
 
 // Add REST interface dispatching here.
-app.get('/games/a2a', function(request, response) {
-    response.setHeader('Content-Type', 'application/json');
-    response.send(JSON.stringify(gameList.getGamesByGameType(true)));
-});
-
 app.get('/games/cah', function(request, response) {
     response.setHeader('Content-Type', 'application/json');
     response.send(JSON.stringify(gameList.getGamesByGameType(false)));
@@ -74,12 +69,6 @@ app.get('/games/cah', function(request, response) {
 app.get('/games', function(request, response) {
     response.setHeader('Content-Type', 'application/json');
     response.send(JSON.stringify(gameList.getAllGames()));
-});
-
-app.get('/new/a2a', function(request, response) {
-    const gameId = gameList.createGame(true);
-    response.setHeader('Content-Type', 'application/json');
-    response.send(JSON.stringify(gameList.getGameByGameId(gameId)));
 });
 
 app.get('/new/cah', function(request, response) {
