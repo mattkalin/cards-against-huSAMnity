@@ -15,6 +15,7 @@
 body {
     margin: 0;
     text-align: center;
+    // font-family: 'Myriad Pro', sans-serif;
 }
 
 .shaded {
@@ -24,6 +25,9 @@ body {
 /* Variables. */
 $startup-max-width: 600px;
 $play-max-width: 1200px;
+
+h4 {
+}
 
 /* Mix-ins. */
 @mixin big-button {
@@ -278,6 +282,7 @@ $play-max-width: 1200px;
     width: 100%;
     height: 5%;
     border: 1px solid purple;
+    // font-family: 'Norwester', sans-serif;
 
     p {
         top: 50%;
@@ -298,6 +303,8 @@ $play-max-width: 1200px;
     margin: 0 0 5px 0;
 }
 
+
+
 .card {
     width: 300px;
     height: 80px;
@@ -312,12 +319,8 @@ $play-max-width: 1200px;
     background-color: white;
 }
 
-.question-card-front.a2a,
-.answer-card-front.a2a {
-}
-
 .question-card-front.cah {
-    background-color: black;
+    background-color: rgb(86, 21, 148);
 }
 
 .skip-prompt {
@@ -392,7 +395,7 @@ $play-max-width: 1200px;
 }
 
 .question-card-text.cah {
-    background-color: black;
+    background-color: rgb(86, 21, 148);
     color: white;
 }
 
@@ -423,7 +426,7 @@ $play-max-width: 1200px;
     height: 70%;
     float: right;
     border: 1px solid darkgreen;
-    background-color: #f0fff0;
+    background-color: #f6f6f6;
 }
 
 .solution {
