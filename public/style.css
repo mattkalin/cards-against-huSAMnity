@@ -249,7 +249,7 @@ body {
   background-color: white; }
 
 .question-card-front.cah {
-  background-color: purple; }
+  background-color: #561594; }
 
 .skip-prompt {
   background-color: maroon;
@@ -313,7 +313,7 @@ body {
   margin: 0; }
 
 .question-card-text.cah {
-  background-color: purple;
+  background-color: #561594;
   color: white; }
 
 .question-card-back.a2a {
@@ -337,7 +337,7 @@ body {
   height: 70%;
   float: right;
   border: 1px solid darkgreen;
-  background-color: #f0fff0; }
+  background-color: #f6f6f6; }
 
 .solution {
   width: 100%; }
